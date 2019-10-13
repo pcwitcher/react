@@ -4,18 +4,14 @@ import PropTypes from 'prop-types';
 
 class List extends React.Component {
   static propTypes = {
-    title: PropTypes.node.isRequired,
-    image: proTypes.string,
-    children: PropTypes.node
+    title: PropTypes.string.isRequired,
   };
 
   render() {
     return (
-      <div id="app">
         <section className={styles.component}>
-          <h3 className={styles.title}></h3>
+          <h3 className={styles.title}>{this.props.title}</h3>
         </section>
-      </div>
     );
   }
 }

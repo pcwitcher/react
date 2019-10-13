@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 class List extends React.Component {
   static propTypes = {
     title: PropTypes.node.isRequired,
-    image: proTypes.string,
+    image: proTypes.string.isRequired,
     children: PropTypes.node
   };
 
@@ -17,16 +17,15 @@ class List extends React.Component {
 
   render() {
     return (
-      <div id="app">
         <section className={styles.component}>
-          <Hero titleText={this.props.title} />
-          <Hero image={this.props.image} />
+          <Hero titleText={this.props.title} imageURL={this.props.image}/>
           <div className={styles.description}>{this.props.children}</div>
+          <div className={styles.columns}>
+            <Column title="Column one"/>
+            <Column title="Column two"/>
+            <Column title="Column three"/>
+          </div>
         </section>
-        <div className={styles.component}>
-          <Column />
-        </div>
-      </div>
     );
   }
 }
