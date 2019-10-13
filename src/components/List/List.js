@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 class List extends React.Component {
   static propTypes = {
     title: PropTypes.node.isRequired,
-    image: proTypes.string.isRequired,
+    image: ProTypes.string.isRequired,
     children: PropTypes.node
   };
 
